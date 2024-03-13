@@ -1,5 +1,8 @@
-bitcoind/.data
-!bitcoind/.data/bitcoind-template
+bitcoind/.data/*
+!bitcoind/.data/bitcoind-tmp
+
+lnd/.data/*
+!lnd/.data/lnd-tmp
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos
