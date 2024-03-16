@@ -3,6 +3,11 @@ set -Eeuo pipefail
 
 source /usr/local/bin/wait-for-bitcoind.sh
 
+if [ -d $HOME/.lnd/data ]; then
+	rm -rf $HOME/.lnd/data $HOME/.lnd/letsencrypt $HOME/.lnd/logs $HOME/.lnd/tls.*
+	echo "Previous Chain deleted(FIXME)"
+fi
+
 echo Starting lnd...
 lnd --lnddir=$HOME/.lnd --noseedbackup >/dev/null &
 
